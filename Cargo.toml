@@ -1,0 +1,16 @@
+[package]
+name = "ams-han-decoder"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+authors = ["Robin Smidsrød <robin@smidsrod.no>"]
+description = "Decode data from a power meter AMS HAN port"
+keywords = ["monitoring", "iot"]
+categories = ["command-line-utilities"]
+readme = "README.md"
+repository = "https://github.com/robinsmidsrod/ams-han-decoder-rs"
+
+[dependencies]
+clap = { version = "4.5.41", features = ["derive"] }
+derive_more = { version = "2.0.1", features = ["from"] }
+wild = "2.2.1"
