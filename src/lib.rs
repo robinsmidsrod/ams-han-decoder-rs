@@ -29,6 +29,7 @@ pub fn run(args: ArgsOs) -> Result<()> {
                 buf.resize(n, 0);
                 hexdump(&buf);
             }
+            Err(e) if e.kind() == std::io::ErrorKind::Interrupted => {}
             Err(e) => {
                 eprintln!("Reading from socket failed: {e}");
                 break;
